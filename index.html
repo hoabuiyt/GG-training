@@ -3,7 +3,7 @@
 
 <head>
   <!-- include head.html -->
-  <title>Trang chủ</title>
+  <title>HTML Boilerplate</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
   <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
@@ -20,220 +20,83 @@
   <meta property="og:type" content="">
   <meta property="og:url" content="" />
   <!-- Google Font -->
-
-  <style type="text/css">
-    .loader {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: 999999;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -moz-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      -webkit-align-items: center;
-      -moz-align-items: center;
-      align-items: center;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      -webkit-justify-content: center;
-      -moz-justify-content: center;
-      justify-content: center;
-
-      -webkit-flex-direction: column;
-      -moz-flex-direction: column;
-      -ms-flex-direction: column;
-      flex-direction: column;
-
-      background-color: #fff;
-      background-position: center center;
-      background-repeat: no-repeat;
-      -webkit-transition: all .3s;
-      -moz-transition: all .3s;
-      -o-transition: all .3s;
-      transition: all .3s;
-    }
-
-    .loader:after {
-      content: '';
-      background-image: url(images/partial/button-loader.gif);
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      width: 135px;
-      height: 30px;
-      margin-left: 7px;
-      -webkit-transition: all .3s;
-      -moz-transition: all .3s;
-      -o-transition: all .3s;
-      transition: all .3s;
-    }
-
-    .loader:before {
-      content: '';
-      background-image: url(images/partial/logo.png);
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-size: contain;
-      width: 110px;
-      height: 110px;
-      margin-bottom: 10px;
-      -webkit-transition: all .3s;
-      -moz-transition: all .3s;
-      -o-transition: all .3s;
-      transition: all .3s;
-    }
-
-    .loader.loaded:before,
-    .loader.loaded:after,
-    .loader.loaded {
-      opacity: 0;
-      visibility: hidden;
-    }
-  </style>
   <!-- include styles.html -->
-
+  <link rel="stylesheet" href="style/vendor.min.css">
   <link rel="stylesheet" href="style/style.min.css">
 </head>
 
-<body class="loading">
-  <div class="loader"></div>
+<body>
   <div class="wrapper">
     <!-- include header.html -->
-    <header class="header-container @@class">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="container">
-            <!-- header mobile -->
-            <div class="header-mobile-content">
-              <div class="background-header-mobile"></div>
-              <div class="wrap-content">
-                <h1 class="logo"><a href="./index.html" class="logo-link"><img src="images/partial/logo.png"></a></h1>
-                <ul class="top-nav-menu">
-                  <li class="top-nav-menu-item"><a href="./user.html" class="item-link">Người dùng</a></li>
-                  <li class="top-nav-menu-item"><a href="./business.html" class="item-link">Doanh nghiệp</a></li>
-                </ul>
-              </div>
-              <button class="btn-menu-mobile">
-                <span class="content-btn"></span>
-              </button>
-            </div>
-            <!-- end -->
-            <!-- header desktop -->
-            <div class="header-content">
-              <button class="btn-menu-mobile">
-                <span class="content-btn"></span>
-              </button>
-              <div class="header-content-top">
-                <a href="index-en.html" class="item-link">English</a>
-              </div>
-              <div class="header-content-bottom">
-                <div class="header-content-left">
-                  <h1 class="logo"><a href="index.html" class="logo-link"><img src="images/partial/logo.png"></a></h1>
-                  <ul class="top-nav-menu">
-                    <li class="top-nav-menu-item"><a href="./user.html" class="item-link">Người dùng</a></li>
-                    <li class="top-nav-menu-item"><a href="./business.html" class="item-link">Doanh nghiệp</a></li>
-                    <li class="top-nav-menu-item"><a href="" class="item-link">FAQ</a></li>
-                    <li class="top-nav-menu-item"><a href="./about-us.html" class="item-link">Về chúng tôi</a></li>
-                    <li class="top-nav-menu-item"><a href="" class="item-link">Block</a></li>
-                  </ul>
-                </div>
-                <div class="header-content-right">
-                  <a href="./signin.html" class="btn-signin">Đăng nhập</a>
-                  <a href="./signup.html" class="btn-signup waves-light">Đăng ký miễn phí</a>
-                </div>
-                <!-- header page sign in -->
-                <div class="header-content-right content-signin">
-                  <span class="title-register">Bạn chưa có tài khoản?</span>
-                  <a href="./signup.html" class="btn-signup waves-light">Đăng ký miễn phí</a>
-                </div>
-                <!-- end -->
-                <!-- header page sing up -->
-                <div class="header-content-right content-signup">
-                  <span class="title-register">Bạn đã có tài khoản?</span>
-                  <a href="./signin.html" class="btn-signup waves-light">Đăng nhập</a>
-                </div>
-                <!-- end -->
-              </div>
-            </div>
-            <!-- end -->
-          </div>
+    <header class="header-container" style="background-image: url('images/bg-header.png')">
+      <div class="container">
+        <div class="logo" id="logo">
+          <a href="/">
+            <img src="images/logo.png" alt="logo">
+          </a>
+        </div>
+        <div class="header-content">
+          <h1 class="header-title">HỆ THỐNG CHÍNH QUYỀN ĐIỆN TỬ</h1>
+          <p class="header-desc">TỈNH QUẢNG NAM</p>
         </div>
       </div>
     </header>
 
-    <section class="main-container index">
-
-      <!-- main content -->
-      <div class="main-content">
-        <section class="home-content-left">
-          <h2 class="title-content wow fadeInDown">Trợ lý Ảo đột phá</h2>
-          <p class="description-content wow fadeInDown">Người trợ lý với lời khuyên ẩm thực chất lừ cho bạn. Inbox ngay Gonjoy trên Facbook Messenger.</p>
-          <div class="wrap-button wow fadeInDown">
-            <a href="user.html" class="btn-white wave-light">Tìm hiểu ngay</a>
+    <!-- include bread scrum.html -->
+    <section class="scrum-container">
+      <div class="container">
+        <p class="scrum-desc">Chào mừng, bạn đến với Hệ thống chính quyền điện tử tỉnh Quảng Nam</p>
+        <div class="scrum-action @@auth">
+          <div class="scrum-un-auth">
+            <a href="javascript:void(0)" class="link">ĐĂNG NHẬP</a>&nbsp;|&nbsp;
+            <a href="javascript:void(0)" class="link">ĐĂNG KÝ</a>
           </div>
-          <div class="wrap-img wow fadeInDown">
-            <img src="images/index/img-1.png">
-          </div>
-        </section>
-        <section class="home-content-right">
-          <h2 class="title-content wow fadeInDown">Joy và Doanh Nghiệp</h2>
-          <p class="description-content wow fadeInDown">Kết nối khách hàng của bạn 24/7.<br>Hỗ trợ việc kinh doanh của bạn 24/7</p>
-          <div class="wrap-button wow fadeInDown">
-            <a href="business.html" class="btn-white wave-light">Tìm hiểu ngay</a>
-          </div>
-          <div class="wrap-img wow fadeInDown">
-            <img src="images/index/img-2.png">
-          </div>
-        </section>
-      </div>
-
-      <div class="clearfix"></div>
-    </section>
-
-    <!-- include footer.html -->
-    <footer class="footer-container">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="container">
-            <div class="footer-content">
-              <div class="footer-content-left">
-                <h2 class="logo-footer"><a href="./index.html" class="logo-link"><img src="images/partial/logo.png"></a></h2>
-                <span class="copyright-text">&copy; 2017 GOnJoy. All Rights Reserved</span>
-              </div>
-              <div class="footer-content-right">
-                <!-- list menu footer -->
-                <ul class="top-nav-menu">
-                  <li class="top-nav-menu-item"><a href="./user.html" class="item-link">Người dùng</a></li>
-                  <li class="top-nav-menu-item"><a href="./business.html" class="item-link">Doanh nghiệp</a></li>
-                  <li class="top-nav-menu-item"><a href="" class="item-link">FAQ</a></li>
-                  <li class="top-nav-menu-item"><a href="./about-us.html" class="item-link">Về chúng tôi</a></li>
-                  <li class="top-nav-menu-item"><a href="" class="item-link">Block</a></li>
-                </ul>
-                <!-- end -->
-                <!-- list social link -->
-                <ul class="bottom-social-list">
-                  <li class="social-item"><a href="" class="item-link"><i class="j-facebook"></i></a></li>
-                  <li class="social-item"><a href="" class="item-link"><i class="j-youtube"></i></a></li>
-                  <li class="social-item"><a href="" class="item-link"><i class="j-google"></i></a></li>
-                </ul>
-                <!-- end -->
-              </div>
-            </div>
+          <div class="scrum-auth">
+            <a href="javascript:void(0)" class="link avt">
+              <span class="icon icon-user"></span>
+              Nguyễn Văn Anh</a>&nbsp;|&nbsp;
+            <a href="/" class="link">Đăng xuất</a>
           </div>
         </div>
       </div>
-      <div class="clearfix"></div>
+    </section>
+
+
+    <main class="main-container">
+      <!-- include bread scrum.html -->
+      <form class="form">
+        <h2 class="title">ĐĂNG NHẬP</h2>
+        <div class="input-form">
+          <label class="label">TÀI KHOẢN <span class="required">*</span></label>
+          <input type="text" name="username" class="input">
+        </div>
+        <div class="input-form">
+          <label class="label">MẬT KHẨU <span class="required">*</span></label>
+          <input type="password" name="password" class="input">
+        </div>
+        <div class="wrap-actions">
+          <div class="checkbox">
+            <input type="checkbox" name="checkbox">
+            Ghi nhớ mật khẩu đăng nhập
+          </div>
+          <div class="fogot">
+            <a href="">Quên mật khẩu</a>
+          </div>
+        </div>
+        <div class="wrap-button">
+          <a href="/home.html" class="submit">ĐĂNG NHẬP</a>
+        </div>
+      </form>
+    </main>
+
+    <!-- include footer.html -->
+    <footer class="footer-container">
+      <p class="footer-cop">&copy;2019 - Sở Thông Tin Truyền Thông Tỉnh Quảng Nam</p>
     </footer>
   </div>
 
   <!-- include scripts.html -->
-
+  <script src="script/vendor.min.js"></script>
   <script src="script/script.min.js"></script>
 </body>
 
